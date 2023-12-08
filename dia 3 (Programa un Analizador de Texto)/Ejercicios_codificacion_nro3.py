@@ -54,6 +54,11 @@ para ello, no debes cambiar la línea de código ya escrita, sino actualizar los
 """
 mi_dic = {"nombre": "Karen", "apellido": "Jurgens", "edad": 35, "ocupacion": "Periodista"}
 
+mi_dic['edad'] = 36
+
+mi_dic['ocupacion'] = 'editora'.capitalize()
+
 mi_dic['pais'] = 'colombia'.capitalize()
+
 
 print(mi_dic.values())
