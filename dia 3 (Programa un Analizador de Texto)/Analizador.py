@@ -34,9 +34,10 @@ class Analizador:
         return texto_usuario
 
     @classmethod
-    def primera_letra(cls):
+    def primera_ultima_letra(cls):
         texto_usuario = cls.diccionario['TEXTO_USUARIO']
-        log.info(f'primera letra del texto es {texto_usuario[0]}'.title())
+        log.info(f"""primera letra del texto es {texto_usuario[0]}
+ultima letra del texto es {texto_usuario[-1]}""".title())
 
     @classmethod
     def texto_invertido(cls):
@@ -66,7 +67,7 @@ if __name__ == '__main__':
 
     Analizador.contador_letra_texto()
     Analizador.contador_palabras()
-    Analizador.primera_letra()
+    Analizador.primera_ultima_letra()
     Analizador.texto_invertido()
     Analizador.encontrar_python()
 
