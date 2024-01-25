@@ -15,20 +15,13 @@ def inicio():
         system('Close')
         match opcion:
             case '1':
-                print('depositar a la cuenta'.upper().center(50, '*'))
-                numero = input('ingrese un valor: ')
-
-                cliente.depositar(Datos.validar_numero(numero))
-
-                print(cliente)
+                numero = Datos.validar_numero()
+                cliente.depositar(numero)
 
             case '2':
-                print('retirar a la cuenta'.upper().center(50, '*'))
-                numero = input('ingrese un valor: ')
 
-                cliente.retirar(Datos.validar_numero(numero))
-
-                print(cliente)
+                numero = Datos.validar_numero()
+                cliente.retirar(numero)
 
             case '0':
                 print('Adios')
