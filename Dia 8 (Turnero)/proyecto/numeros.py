@@ -2,24 +2,21 @@
 
 
 def turno_perfume():
-    turno = 0
-    for i in range(0, 101):
-        turno += 1
+    for i in range(1, 101):
+        turno = i
         yield f'P-{turno}'
 
 
 def turno_farmacia():
-    turno = 0
-    for i in range(0, 101):
-        turno += 1
-        yield f'F-{turno}'
+    for i in range(1, 101):
+        turno = i
+        yield f'P-{turno}'
 
 
 def turno_cosmeticos():
-    turno = 0
-    for i in range(0, 101):
-        turno += 1
-        yield f'C-{turno}'
+    for i in range(1, 101):
+        turno = i
+        yield f'P-{turno}'
 
 
 p = turno_perfume()
