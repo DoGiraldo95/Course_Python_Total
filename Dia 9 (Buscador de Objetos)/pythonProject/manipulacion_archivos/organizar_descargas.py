@@ -8,6 +8,24 @@ direccion = Path(r'C:\Users\dgiraldo\Downloads')
 os.chdir(direccion)
 
 
+def mostrar_contenido(funcion):
+    def directorio():
+        for capeta, subcarpeta, archivos in os.walk(direccion):
+            print('\ndentro de la carpeta {} esta el siguiente detalle: '.format(Path(capeta).name))
+
+            print('Sub carpetas: ')
+            for subcar in subcarpeta:
+                print(f'\t{subcar}')
+
+            print('\nLos siguientes son los archivos: ')
+            for arch in archivos:
+                print(f'\t{arch}')
+
+        funcion()
+
+    return directorio
+
+
 def organiza(file):
     if 'pdf' in file:
         shutil.move(file, Path(direccion, 'PDF'))
@@ -19,6 +37,7 @@ def organiza(file):
         shutil.move(file, Path(direccion, 'OTROS'))
 
 
+@mostrar_contenido
 def archivo():
     archivos = os.listdir()
     try:
