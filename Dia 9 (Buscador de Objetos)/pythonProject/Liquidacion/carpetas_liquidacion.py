@@ -16,7 +16,7 @@ class Carpetas:
     @classmethod
     def carpeta_dia(cls):
         """La funcion crea carpeta principal de acuerdo al día de ejecución"""
-        carpeta = Path(cls.RUTA, str(cls.FECHA.day+1))
+        carpeta = Path(cls.RUTA, str(cls.FECHA.day))
         carpeta.mkdir()
         return carpeta
 

@@ -5,7 +5,7 @@ from carpetas_liquidacion import Carpetas
 
 
 def mostrar_contenido():
-    ruta = os.path.join(Carpetas.RUTA, str(Carpetas.FECHA.day + 1))
+    ruta = os.path.join(Carpetas.RUTA, str(Carpetas.FECHA.day))
 
     for home, dirs, files in os.walk(ruta):
         print(f'Carpeta {home}')
