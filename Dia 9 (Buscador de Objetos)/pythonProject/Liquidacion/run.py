@@ -1,6 +1,6 @@
 import os
 
-from Liquidacion.archivos_liquidacion import Archivos
+from archivos_liquidacion import Archivos
 from carpetas_liquidacion import Carpetas
 
 

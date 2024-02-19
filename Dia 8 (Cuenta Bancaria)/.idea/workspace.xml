@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="411725af-4ede-4201-a927-ec794de8aa0a" name="Changes" comment="" />
+    <list default="true" id="411725af-4ede-4201-a927-ec794de8aa0a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dia 9 (Buscador de Objetos)/pythonProject/Liquidacion/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Dia 9 (Buscador de Objetos)/pythonProject/Liquidacion/run.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/diego/Documentos/Repositorio_Curso_Total/Course_Python_Total/Dia 9 (Buscador de Objetos)"
+    "last_opened_file_path": "C:/Users/dgiraldo/Documents/git/Course_Python_Total/Dia 9 (Buscador de Objetos)"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -78,7 +82,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
       </set>
     </attachedChunks>
   </component>

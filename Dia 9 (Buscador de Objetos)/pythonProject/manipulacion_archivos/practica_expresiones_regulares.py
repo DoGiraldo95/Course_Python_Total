@@ -25,11 +25,37 @@ def verificar_email(email):
         print('La dirección de email es incorrecta')
 
 
+"""Práctica Módulo RE 2
+Crea una función llamada verificar_saludo para verificar si una frase entregada 
+como argumento inicia con la palabra "Hola". Si se encuentra el patrón, la función debe finalizar 
+mostrando el mensaje "Ok", pero si detecta que la frase no contiene "Hola", debe informarle al usuario 
+"No has saludado" imprimiendo el mensaje en pantalla."""
+
+
+def verificar_saludo(frase):
+    if re.search(r"^[Hh]ola", frase) is not None:
+        print("Ok")
+    else:
+        print("No has saludado")
+"""
+Práctica Módulo RE 3
+El código postal de una región determinada se forma a partir de dos caracteres alfanuméricos y cuatro numéricos a continuación (ejemplo: XX1234). 
+Crea una función, llamada verificar_cp para comprobar si el código postal pasado como argumento sigue este patrón. 
+Si el patrón es correcto, mostrar al usuario el mensaje "Ok", de lo contrario: "El código postal ingresado no es correcto".
+"""
+
+def verificar_cp(cp):
+    if re.search(r"^\w{2}\d{4}", cp) is not None:
+        print("Ok")
+    else:
+        print("El código postal ingresado no es correcto")
+
 if __name__ == "__main__":
     # correo = input('Ingrese la direccion de correo : ')
     # verificar_email(correo)
 
-    padron = r"a[bcd]*b"
-    texto = "abcd"
-
-    print(re.findall(padron, texto))
+    # padron = r"a[bcd]*b"
+    # texto = "abcd"
+    #
+    # print(re.findall(padron, texto))
+    verificar_cp("4X6t66")
