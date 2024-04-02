@@ -5,18 +5,33 @@ Creacion de carpetas de liquidacion diaria
 import datetime
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+from datetime import datetime
 
+load_dotenv()
 
 class Carpetas:
     """Clase contenedora de las funciones de creacion de carpetas de liquidacion"""
-    RUTA = Path(r'C:\Users\dgiraldo\Documents\UTRYT\Liquidaciones Diego\2024\02_Febrero')
-    FECHA = datetime.date.today()
+    RUTA = os.getenv("RUTA_DES")
+    FECHA = datetime.now()
     CARPETAS = ['Detalle', 'Valor a Consignar']
+
+    @classmethod
+    def carpeta_mes(cls):
+        mes = cls.FECHA.strftime("%B")
+        carpeta  = os.path.join(cls.RUTA, mes)
+
+        if mes not in os.listdir(cls.RUTA):
+            os.mkdir(carpeta)
+
+        return carpeta
+            
+
 
     @classmethod
     def carpeta_dia(cls):
         """La funcion crea carpeta principal de acuerdo al día de ejecución"""
-        carpeta = Path(cls.RUTA, str(cls.FECHA.day))
+        carpeta = Path(cls.carpeta_mes(), str(cls.FECHA.day))
         carpeta.mkdir()
         return carpeta
 
@@ -26,3 +41,5 @@ class Carpetas:
         if os.path.isdir(carpeta):
             for x in cls.CARPETAS:
                 Path(carpeta, x).mkdir()
+
+

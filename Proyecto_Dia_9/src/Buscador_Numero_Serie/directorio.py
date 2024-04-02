@@ -1,4 +1,5 @@
 import os, time
+import math
 from collections import namedtuple
 from dotenv import load_dotenv
 from datetime import date
@@ -15,12 +16,12 @@ class Directorio:
     @staticmethod
     def decorador(funcion):
         def tiempoEjecucion(*args):
-            print("----------------------------------------------------")
+            print("-"*50)
             print(f"Fecha de busqueda: {date.today().strftime("%d/%m/%Y")}")
             inicio = time.time()
             funcion(*args)
-            print(f"Duración de la búsqueda: {round(time.time()-inicio,2)} segundos")
-            print("----------------------------------------------------")
+            print(f"Duración de la búsqueda: {math.ceil(time.time()-inicio)} segundos")
+            print("_"*50)
         return tiempoEjecucion
     
     @classmethod
@@ -50,9 +51,9 @@ class Directorio:
         
 
 
-# if __name__ == "__main__":
-#     encontrados =  Directorio.recorrer_directorio()
+if __name__ == "__main__":
+    encontrados =  Directorio.recorrer_directorio()
 
-#     Directorio.imprimir_busqueda(encontrados)
+    Directorio.imprimir_busqueda(encontrados)
 
 
